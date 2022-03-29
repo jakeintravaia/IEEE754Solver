@@ -1,2 +1,59 @@
 # IEEE754Solver
-A simple python program to convert IEEE-754 standard 32-bit single precision binary numbers to decimal 
+A simple python program to convert IEEE-754 standard 32-bit single precision binary numbers to decimal.
+
+<h1>How to use</h1>
+
+Simply enter a 32-bit value into the program when prompted, the program will do the rest of the work!
+
+<h1>Sample Output</h1>
+
+```
+Enter IEEE-754 number (32-bits): 00111101111110111110011101101101
+=========================
+EXPONENT BITS
+=========================
+2^-1 * 0 = 0
+2^6 * 1 = 64
+2^5 * 1 = 32
+2^4 * 1 = 16
+2^3 * 1 = 8
+2^2 * 0 = 0
+2^1 * 1 = 2
+2^0 * 1 = 1
+Final decimal value: 123
+=========================
+EXPONENT OFFSET
+=========================
+123 - 127 = -4
+=========================
+MANTISSA BITS
+=========================
+2^-1 * 1 = 0.5
+2^-2 * 1 = 0.25
+2^-3 * 1 = 0.125
+2^-4 * 1 = 0.0625
+2^-5 * 0 = 0
+2^-6 * 1 = 0.015625
+2^-7 * 1 = 0.0078125
+2^-8 * 1 = 0.00390625
+2^-9 * 1 = 0.001953125
+2^-10 * 1 = 0.0009765625
+2^-11 * 0 = 0
+2^-12 * 0 = 0
+2^-13 * 1 = 0.0001220703125
+2^-14 * 1 = 6.103515625e-05
+2^-15 * 1 = 3.0517578125e-05
+2^-16 * 0 = 0
+2^-17 * 1 = 7.62939453125e-06
+2^-18 * 1 = 3.814697265625e-06
+2^-19 * 0 = 0
+2^-20 * 1 = 9.5367431640625e-07
+2^-21 * 1 = 4.76837158203125e-07
+2^-22 * 0 = 0
+2^-23 * 1 = 1.1920928955078125e-07
+Final decimal value: 0.968000054359436
+=========================
+FINAL RESULT
+=========================
+(-1)^0 * (1 + 0.968000054359436) * 2^-4 = 0.12300000339746475
+```
